@@ -16,21 +16,6 @@ export default function Form({ snippets, setSnippets }) {
     localStorage.setItem("snippets", JSON.stringify(snippetsUndated));
   }
 
-  function handleTitle(e) {
-    const title = e.target.value;
-    setTitle(title);
-  }
-
-  function handleLanguage(e) {
-    const language = e.target.value;
-    setLanguage(language);
-  }
-
-  function handleCode(e) {
-    const code = e.target.value;
-    setCode(code);
-  }
-
   return (
     <div className="Form_container">
       <h2>Snippets Formulaire</h2>
@@ -41,7 +26,7 @@ export default function Form({ snippets, setSnippets }) {
           type="text"
           placeholder="title"
           value={title}
-          onChange={handleTitle}
+          onChange={(e) => setTitle(e.target.value)}
         />
         <label className="Form_label">Snippets language :</label>
         <input
@@ -49,7 +34,7 @@ export default function Form({ snippets, setSnippets }) {
           type="text"
           placeholder="language"
           value={language}
-          onChange={handleLanguage}
+          onChange={(e) => setLanguage(e.target.value)}
         />
         <label className="Form_label">Snippets code :</label>
         <textarea
@@ -57,7 +42,7 @@ export default function Form({ snippets, setSnippets }) {
           type="text"
           placeholder="code"
           value={code}
-          onChange={handleCode}
+          onChange={(e) => setCode(e.target.value)}
         />
         <button>
           <BsFillPlusCircleFill />
