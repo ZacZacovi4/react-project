@@ -27,6 +27,7 @@ export default function Form({ snippets, setSnippets }) {
           placeholder="title"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
+          required
         />
         <label className="Form_label">Snippets language :</label>
         <input
@@ -35,14 +36,16 @@ export default function Form({ snippets, setSnippets }) {
           placeholder="language"
           value={language}
           onChange={(e) => setLanguage(e.target.value)}
+          required
         />
         <label className="Form_label">Snippets code :</label>
         <textarea
-          className="Form_input"
+          className="Form_input code_input"
           type="text"
           placeholder="code"
           value={code}
           onChange={(e) => setCode(e.target.value)}
+          required
         />
         <button>
           <BsFillPlusCircleFill />

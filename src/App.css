@@ -18,6 +18,7 @@ textarea {
 
 .Form_container {
   width: 300px;
+  margin: auto;
 }
 
 .Form_snippets {
@@ -48,8 +49,48 @@ textarea {
   height: fit-content;
 }
 
+.button_container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.code_input {
+  font-family: monospace;
+  white-space: pre;
+}
+
+.code_container {
+  font-family: monospace;
+  white-space: pre;
+  background: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  font-size: 14px;
+  line-height: 1.4;
+  overflow-x: auto;
+}
+
 /* Seacrh */
 
 .search_container {
-  margin-bottom: 50px;
+  max-width: 300px;
+  margin: 50px auto;
+}
+
+/* Modifie Form */
+
+.form_div-container {
+  width: 300px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.modif_button-container {
+  display: flex;
+  margin-left: auto;
+  gap: 16px;
 }
